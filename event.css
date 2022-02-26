@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 3.5rem;
+    padding: 2rem;
+}
+
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 85vh;
+    background-image: url("./images/bg-1.jpg");
+    background-size: cover;
+}
+
+.event-counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.day, .hour, .minute, .second {
+    font-size: 2.5rem;
+    /* padding: 10px; */
+}
+
+.day.change, .hour.change, .minute.change, .second.change {
+    opacity: 0;
+    animation: flip-number 0.95s ease-in-out infinite;
+}
+
+@keyframes flip-number {
+    0% {transform: translateY(-30px);}
+    60% {transform: translateY(0px); opacity: 1;}
+    100% {transform: translateY(30px); opacity: 0;}
+}
+
+.celebration {
+    display: none;
+    min-height: 60vh;
+}
+
+.celebration-image {
+    width: 100%;
+    height: 100%;
+}
